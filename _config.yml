@@ -15,7 +15,7 @@ background_credit: "Background: DESI 3D map of the Universe (DESI collaboration)
 
 # Photo shown top-left on every page. To use your own, add the file
 # (e.g. assets/img/profile.jpg) and point this at it.
-profile_image: /assets/img/profile.svg
+profile_image: /assets/img/profile.jpg
 
 email: wilson.michael.j.22@gmail.com
 github: michaelJwilson
