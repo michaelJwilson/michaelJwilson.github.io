@@ -37,7 +37,7 @@
 - authors: M. J. Wilson & M. White
   year: 2019
   title: 'Cosmology with dropout selection: straw-man surveys & CMB lensing'
-  venue: Astronomy & Astrophysics
+  venue: JCAP
   url: https://iopscience.iop.org/article/10.1088/1475-7516/2019/10/015
 - authors: O. Ruiz-Macias, P. Zarrouk, …, M. J. Wilson, et al.
   year: 2020
@@ -57,14 +57,17 @@
   year: 2024
   title: Production of Alternate Realizations of DESI Fiber Assignment for Unbiased Clustering Measurement in Data and Simulations
   url: https://iopscience.iop.org/article/10.1088/1475-7516/2025/01/127
+  venue: JCAP
 - authors: A. Krolewski, J. Yu, …, M. J. Wilson, et al.
   year: 2025
   title: Impact and mitigation of spectroscopic systematics on DESI DR1 clustering measurements
   url: https://iopscience.iop.org/article/10.1088/1475-7516/2025/01/147
+  venue: JCAP
 - authors: V. Ruhlmann-Kleider, C. Yèche, …, M. J. Wilson, et al.
   year: 2024
   title: High redshift LBGs from deep broadband imaging for future spectroscopic surveys
   url: https://iopscience.iop.org/article/10.1088/1475-7516/2024/08/059
+  venue: JCAP
 - authors: 'DESI Collaboration: A. G. Adame, J. Aguilar, …, M. J. Wilson, et al.'
   year: 2024
   title: 'DESI 2024 II: Sample Definitions, Characteristics, and Two-point Clustering Statistics'
