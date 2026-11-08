@@ -21,10 +21,11 @@
       </nav>
     </div>
   </header>
-  <main class="panel">
+  <main class="panel{% if page.wide %} wide{% endif %}">
     <h1 class="panel-title">{{ page.title }}</h1>
     {{ content }}
   </main>
   {% include footer.html %}
+  {% if page.wide %}<script src="{{ '/assets/js/reveal.js' | relative_url }}" defer></script>{% endif %}
 </body>
 </html>
