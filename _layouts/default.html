@@ -9,7 +9,7 @@
     <div class="topbar-inner">
       <a class="brand" href="{{ '/' | relative_url }}">
         <img class="avatar" src="{{ site.profile_image | relative_url }}" alt="Photo of {{ site.title }}">
-        <span class="brand-name">{{ site.title }}</span>
+        <span class="brand-name">{{ site.title }}{% if site.postnominal %}<span class="postnominal">, {{ site.postnominal }}</span>{% endif %}</span>
       </a>
       <nav class="button-row small" aria-label="Main">
         {% for item in site.data.navigation %}

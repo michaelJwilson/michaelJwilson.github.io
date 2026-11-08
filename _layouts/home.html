@@ -7,7 +7,7 @@
   <div class="backdrop" aria-hidden="true"></div>
   <main class="hero">
     <img class="hero-avatar" src="{{ site.profile_image | relative_url }}" alt="Photo of {{ site.title }}">
-    <h1 class="hero-name">{{ site.title }}</h1>
+    <h1 class="hero-name">{{ site.title }}{% if site.postnominal %}<span class="postnominal">, {{ site.postnominal }}</span>{% endif %}</h1>
     <p class="hero-tagline">{{ site.tagline }}</p>
     <div class="hero-sub">
       {% for line in site.subtitle %}<span>{{ line }}</span>{% endfor %}
