@@ -1,13 +1,4 @@
 # Talks, oldest first. Set invited: true to tag a talk as invited.
-- title: VIMOS Public Extragalactic Redshift Survey conference
-  place: Krakow
-  date: Oct. 2014
-- title: Institute for Astronomy seminar
-  place: Edinburgh
-  date: Jul. 2015
-- title: VIMOS Public Extragalactic Redshift Survey collaboration meeting
-  place: Marseille
-  date: Aug. 2015
 - title: Astronomy seminar
   place: Durham
   date: Oct. 2016
@@ -30,7 +21,7 @@
 - title: Hyper Suprime-Cam research group
   place: Princeton
   date: Nov. 2016
-- title: Chamberlain Fellowship Seminar, Lawrence Berkeley National Lab
+- title: Chamberlain Fellowship Seminar
   place: Berkeley
   date: Jan. 2017
   invited: true
@@ -55,7 +46,7 @@
 - title: 30th Texas Symposium on Relativistic Astrophysics
   place: Portsmouth
   date: Dec. 2019
-- title: Are we ready for the future? Berkeley Center for Cosmological Physics
+- title: Are we ready for the future?
   place: Berkeley
   date: Jan. 2020
 - title: UC Davis cosmology seminar
