@@ -218,3 +218,9 @@ body.inner.scene-page .backdrop { filter: brightness(.08) blur(2px); }
 .pub-meta strong { color: var(--text); font-weight: 600; }
 .pub-venue { font-style: italic; }
 .buttons.center { text-align: center; }
+
+/* Experience: the role/location line and text start level with the top of the photo */
+.role { align-items: start; }
+.role h2 { line-height: 1.4; margin-bottom: .1em; }
+.role .role-figure { padding-top: calc(1.15rem * 1.5); }
+@media (max-width: 860px) { .role .role-figure { padding-top: 0; } }
