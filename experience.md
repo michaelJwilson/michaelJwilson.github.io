@@ -3,13 +3,15 @@ layout: default
 title: Experience
 permalink: /experience/
 ---
-# Experience
 
 <!--
-  To add an image or plot to any section, put the file under assets/img/
-  and add a line like this where you want it:
+  Images: put files under assets/img/experience/ and add, inside a section,
 
-  {% include figure.html src="/assets/img/experience/princeton.png" alt="What it shows" caption="Optional caption" %}
+  A wide banner under the section heading:
+  {% include banner.html src="/assets/img/experience/princeton.jpg" alt="What it shows" %}
+
+  A plot or figure with a caption:
+  {% include figure.html src="/assets/img/experience/princeton-plot.png" alt="What it shows" caption="Optional caption" %}
 -->
 
 <section class="role" id="princeton" markdown="1">

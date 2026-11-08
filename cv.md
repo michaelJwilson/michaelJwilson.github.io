@@ -3,7 +3,6 @@ layout: default
 title: CV
 permalink: /cv/
 ---
-# CV
 
 <div class="buttons">
   <a class="button primary" href="{{ '/assets/Michael_J_Wilson_CV.pdf' | relative_url }}">Download CV (PDF)</a>

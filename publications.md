@@ -3,7 +3,6 @@ layout: default
 title: Publications
 permalink: /publications/
 ---
-# Publications
 
 Selected papers. A complete list of 15+ publications (~500 citations) is available on request.
 

@@ -1,6 +1,13 @@
 title: Michael J. Wilson
 tagline: Computational physicist & data scientist
+subtitle:
+  - Statistical models · High-performance software · Data pipelines
+  - Genomics · Physics
+location: Princeton, NJ · Open to NYC
 description: Statistical models, high-performance software and production data pipelines for genomics and physics.
+
+# Full-screen background image (any dark image works)
+background_image: /assets/img/background.jpg
 
 # Photo shown top-left on every page. To use your own, add the file
 # (e.g. assets/img/profile.jpg) and point this at it.
