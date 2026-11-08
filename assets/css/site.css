@@ -186,3 +186,21 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .role:nth-of-type(even) .role-figure { order: 0; }
   .role .figure { margin-top: 1.4em; }
 }
+
+/* Experience slide-in (enabled by assets/js/reveal.js) */
+.reveal-on .role .role-text,
+.reveal-on .role .role-figure {
+  opacity: 0;
+  transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1);
+}
+.reveal-on .role .role-text { transform: translateX(-48px); }
+.reveal-on .role .role-figure { transform: translateX(48px); transition-delay: .12s; }
+.reveal-on .role:nth-of-type(even) .role-text { transform: translateX(48px); }
+.reveal-on .role:nth-of-type(even) .role-figure { transform: translateX(-48px); }
+.reveal-on .role.in-view .role-text,
+.reveal-on .role.in-view .role-figure { opacity: 1; transform: none; }
+@media (max-width: 860px) {
+  .reveal-on .role .role-text, .reveal-on .role:nth-of-type(even) .role-text,
+  .reveal-on .role .role-figure, .reveal-on .role:nth-of-type(even) .role-figure { transform: translateY(28px); }
+}
+.reveal-on body { overflow-x: clip; }
