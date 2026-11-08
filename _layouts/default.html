@@ -12,7 +12,7 @@
         <span class="brand-name">{{ site.title }}{% if site.postnominal %}<span class="postnominal">, {{ site.postnominal }}</span>{% endif %}</span>
       </a>
       <nav class="button-row small" aria-label="Main">
-        {% for item in site.data.navigation %}
+        {% for item in site.data.navigation %}{% if item.flag and site[item.flag] != true %}{% continue %}{% endif %}
           {% assign active = false %}
           {% if item.url == "/" %}{% if page.url == "/" %}{% assign active = true %}{% endif %}
           {% elsif page.url contains item.url %}{% assign active = true %}{% endif %}

@@ -1,0 +1,90 @@
+# Publications as first author or core contributor, in the order shown.
+# Fields: authors, year, title, venue, url (any can be omitted). "M. J. Wilson" is bolded automatically.
+- authors: M. J. Wilson et al.
+  year: 2012
+  title: 'Atacama Cosmology Telescope: A measurement of the Sunyaev-Zel''dovich effect using the skewness of the CMB temperature distribution'
+  venue: Physical Review D, 86, 122005
+  url: http://journals.aps.org/prd/abstract/10.1103/PhysRevD.86.122005
+- authors: M. J. Wilson, J. Peacock, A. Taylor, S. de la Torre
+  year: 2016
+  title: Rapid modelling of the redshift-space power spectrum multipoles for a masked density field
+  venue: MNRAS
+  url: http://mnras.oxfordjournals.org/content/early/2016/10/08/mnras.stw2576.abstract
+- authors: M. J. Wilson
+  year: 2016
+  title: Geometric and growth rate tests of General Relativity with recovered linear cosmological perturbations
+  venue: PhD Thesis
+  url: http://arxiv.org/abs/1610.08362
+- authors: S. Rota, B. R. Granett, …, M. J. Wilson and the VIPERS collaboration
+  year: 2016
+  title: The matter density and baryon fraction from the galaxy power spectrum at 0.6 < z < 1.1
+  venue: Astronomy & Astrophysics
+  url: https://www.aanda.org/articles/aa/abs/2017/05/aa30116-16/aa30116-16.html
+- authors: A. Smith, J. He, S. Cole, …, M. J. Wilson and the DESI Collaboration
+  year: 2018
+  title: Correcting for fibre assignment incompleteness in the DESI bright galaxy survey
+  venue: MNRAS
+  url: https://academic.oup.com/mnras/article-abstract/484/1/1285/5281295
+- authors: W. J. Percival, C. Yèche, M. Bilicki, A. Font-Ribera, …, M. J. Wilson
+  year: 2019
+  title: Cosmology with the Mauna Kea Spectroscopic Explorer
+  url: https://arxiv.org/abs/1903.03158
+- authors: S. Ferraro, M. J. Wilson, et al.
+  year: 2019
+  title: Inflation and Dark Energy from spectroscopy at z > 2
+  venue: Astro2020 Science White Paper
+  url: https://arxiv.org/abs/1903.09208
+- authors: M. J. Wilson & M. White
+  year: 2019
+  title: 'Cosmology with dropout selection: straw-man surveys & CMB lensing'
+  venue: Astronomy & Astrophysics
+  url: https://iopscience.iop.org/article/10.1088/1475-7516/2019/10/015
+- authors: O. Ruiz-Macias, P. Zarrouk, S. Cole, …, M. J. Wilson, et al.
+  year: 2020
+  title: Characterizing the target selection pipeline for the Dark Energy Spectroscopic Instrument Bright Galaxy Survey
+  venue: MNRAS
+  url: https://academic.oup.com/mnras/article/502/3/4328/6127300
+- authors: C. Hahn, M. J. Wilson, O. Ruiz and the DESI collaboration
+  year: 2022
+  title: 'DESI Bright Galaxy Survey: Final target selection, design and validation'
+  venue: ApJ
+  url: https://iopscience.iop.org/article/10.3847/1538-3881/accff8/pdf
+- authors: A. D. Myers, J. Moustakas, S. Bailey, B. A. Weaver, …, M. J. Wilson, et al.
+  year: 2023
+  title: The Target-selection Pipeline for the Dark Energy Spectroscopic Instrument
+  url: https://iopscience.iop.org/article/10.3847/1538-3881/aca5f9/pdf
+- authors: J. Lasker, A. Carnero Rosell, A. D. Myers, A. J. Ross, …, M. J. Wilson, et al.
+  year: 2024
+  title: Production of Alternate Realizations of DESI Fiber Assignment for Unbiased Clustering Measurement in Data and Simulations
+  url: https://iopscience.iop.org/article/10.1088/1475-7516/2025/01/127
+- authors: A. Krolewski, J. Yu, A. J. Ross, S. Penmetsa, W. J. Percival, R. Zhou, M. J. Wilson, et al.
+  year: 2025
+  title: Impact and mitigation of spectroscopic systematics on DESI DR1 clustering measurements
+  url: https://iopscience.iop.org/article/10.1088/1475-7516/2025/01/147
+- authors: V. Ruhlmann-Kleider, C. Yèche, …, M. J. Wilson, et al.
+  year: 2024
+  title: High redshift LBGs from deep broadband imaging for future spectroscopic surveys
+  url: https://iopscience.iop.org/article/10.1088/1475-7516/2024/08/059
+- authors: 'DESI Collaboration: A. G. Adame, J. Aguilar, S. Ahlen, S. Alam, …, M. J. Wilson, et al.'
+  year: 2024
+  title: 'DESI 2024 II: Sample Definitions, Characteristics, and Two-point Clustering Statistics'
+  url: https://arxiv.org/pdf/2411.12020
+- authors: C. Ma, M. Balaban, …, M. J. Wilson, et al.
+  year: 2024
+  title: Inferring allele-specific copy number aberrations and tumor phylogeography from spatially resolved transcriptomics
+  venue: Nature Methods
+  url: https://www.nature.com/articles/s41592-024-02438-9
+- authors: F. Puddu, …, M. J. Wilson, et al.
+  year: 2025
+  title: 5-methylcytosine and 5-hydroxymethylcytosine are synergistic biomarkers for early detection of colorectal cancer
+  venue: Submitted to PNAS
+  url: https://www.biorxiv.org/content/10.1101/2024.10.30.621123v1.full.pdf
+- authors: A. J. Ross, J. Aguilar, S. Ahlen, S. Alam, A. Anand, …, M. J. Wilson, et al.
+  year: 2025
+  title: The construction of large-scale structure catalogs for the Dark Energy Spectroscopic Instrument
+  venue: JCAP
+  url: https://iopscience.iop.org/article/10.1088/1475-7516/2025/01/125
+- authors: G. Dolsten, Y. Prytikin, …, M. J. Wilson, et al.
+  year: 2025
+  title: Metadomain genome associations in mammalian T cells
+  venue: Submitted to Nature Methods

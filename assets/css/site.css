@@ -162,3 +162,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .panel { padding: 28px 20px 32px; margin-top: 20px; }
   .panel-title { font-size: 1.2rem; }
 }
+
+/* Talks */
+.talks { list-style: none; padding: 0; margin: 0; }
+.talks li { display: flex; gap: 1.2em; padding: .55em 0; border-bottom: 1px solid rgba(255, 255, 255, .07); }
+.talks li:last-child { border-bottom: 0; }
+.talk-date { flex: none; width: 6.5em; color: var(--accent-2); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; padding-top: .2em; }
+.tag { display: inline-block; margin-left: .4em; padding: 0 .55em; border: 1px solid var(--accent-3); border-radius: 999px; color: var(--accent-3); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; vertical-align: .15em; }
+.pubs a em { color: var(--text); }
+.pubs a:hover em { color: #fff; }
+@media (max-width: 700px) { .talks li { flex-direction: column; gap: .1em; } }
