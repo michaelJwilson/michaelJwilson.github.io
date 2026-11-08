@@ -14,8 +14,11 @@ Publications as first author or as core contributor.
 <ul class="pub-list">
 {%- for p in pubs %}{% assign py = p.year | append: "" %}{% if py == y %}
   <li>
-    <div class="pub-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</div>
-    <div class="pub-meta">{{ p.authors | replace: "M. J. Wilson", "<strong>M. J. Wilson</strong>" }}{% if p.venue %} · <span class="pub-venue">{{ p.venue }}</span>{% endif %}</div>
+    <div class="pub-main">
+      <div class="pub-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</div>
+      <div class="pub-meta">{{ p.authors | replace: "M. J. Wilson", "<strong>M. J. Wilson</strong>" }}</div>
+    </div>
+    <div class="pub-venue">{{ p.venue }}</div>
   </li>
 {%- endif %}{% endfor %}
 </ul>
