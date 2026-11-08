@@ -20,6 +20,8 @@ permalink: /experience/
 
 I lead development of [`cna-maste`](https://github.com/raphael-group/cna_maste), open-source software that detects cancer copy-number aberrations — gains and losses of DNA that drive tumors — in high-resolution spatial transcriptomics (10x VisiumHD, Illumina StrataMap).
 
+{% include figure.html src="/assets/img/experience/princeton-spatial.jpg" alt="Spatial transcriptomics map of a tumor tissue section, coloured by region" caption="Spatial transcriptomics of a tumor tissue section, coloured by region." %}
+
 It improves sensitivity and recall by ~25% over existing methods and scales to ~100K spatial locations in minutes, using sparsity, graph cuts, JAX and inductive bias. Validated on simulations and an ovarian cancer sample; first-author manuscript submitted.
 </section>
 
