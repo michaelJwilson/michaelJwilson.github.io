@@ -1,11 +1,8 @@
 # Talks, oldest first. Set invited: true to tag a talk as invited.
-- title: Astronomy seminar
-  place: Durham
-  date: Oct. 2016
-- title: Astronomy seminar, Institut d'Estudis Espacials de Catalunya
+- title: Institut d'Estudis Espacials de Catalunya
   place: Barcelona
   date: Oct. 2016
-- title: Cosmology research group
+- title: Cosmology seminar
   place: Yale
   date: Nov. 2016
 - title: Cosmology seminar
@@ -25,10 +22,10 @@
   place: Berkeley
   date: Jan. 2017
   invited: true
-- title: B-modes from Space, University of California
+- title: B-modes from Space
   place: Berkeley
   date: Dec. 2017
-- title: Multiplexed Fiber Spectroscopy with Keck & the TMT, LBNL
+- title: Multiplexed Fiber Spectroscopy with Keck & the TMT
   place: Berkeley
   date: Jan. 2018
 - title: New results and new methods in galaxy clustering
@@ -49,11 +46,11 @@
 - title: Are we ready for the future?
   place: Berkeley
   date: Jan. 2020
-- title: UC Davis cosmology seminar
+- title: Cosmology seminar
   place: Davis, CA
   date: Feb. 2020
   invited: true
-- title: Berkeley 4D Theoretical Physics seminar
+- title: 4D Theoretical Physics seminar
   place: Berkeley
   date: Apr. 2020
   invited: true
