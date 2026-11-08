@@ -17,6 +17,9 @@ background_credit: "Background: DESI 3D map of the Universe (DESI collaboration)
 # (e.g. assets/img/profile.jpg) and point this at it.
 profile_image: /assets/img/profile.jpg
 
+# Show the Talks tab and page (true / false)
+show_talks: true
+
 email: wilson.michael.j.22@gmail.com
 github: michaelJwilson
 linkedin: https://www.linkedin.com/in/michael-wilson-62a224b7

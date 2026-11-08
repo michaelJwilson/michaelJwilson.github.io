@@ -14,7 +14,7 @@
       <span class="hero-location">{{ site.location }}</span>
     </div>
     <nav class="button-row" aria-label="Main">
-      {% for item in site.data.navigation %}{% unless item.url == "/" %}
+      {% for item in site.data.navigation %}{% if item.flag and site[item.flag] != true %}{% continue %}{% endif %}{% unless item.url == "/" %}
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       {% endunless %}{% endfor %}
     </nav>
