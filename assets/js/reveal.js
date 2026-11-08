@@ -1,8 +1,7 @@
-// Experience page: continuous roll-in / roll-out tied to scroll position.
-// Roles scroll normally (no sticking). As a role enters from the bottom it
-// rolls in (tilted back, flattening as it rises); as it leaves at the top it
-// rolls out (tilting forward and fading). Large gaps between roles leave a
-// black bridge before the next one rolls in.
+// Experience page: roll-out / black / fade-in, tied to scroll position.
+// Roles scroll normally (no sticking). As a role leaves at the top it rolls
+// out (tilting forward and fading). Large gaps between roles leave a black
+// bridge; the next role then fades in quickly from black, without moving.
 (function () {
   var roles = [].slice.call(document.querySelectorAll('.role'));
   if (!roles.length) return;
@@ -21,8 +20,9 @@
     roles.forEach(function (r) {
       var rect = r.getBoundingClientRect();
       var h = Math.min(rect.height, view);
-      // 0 when the role's top is at the bottom of the screen, 1 once it is 45% up
-      var enter = smooth(clamp((vh - rect.top) / (view * 0.45)));
+      // Quick fade in from black: 0 when the role's top is 25% up the screen,
+      // 1 once it is 40% up (no movement)
+      var enter = smooth(clamp((vh - view * 0.25 - rect.top) / (view * 0.15)));
       // 0 while the role's bottom is in the lower part of the view, 1 once it reaches the top bar
       var exit = smooth(clamp((top + h * 0.55 - rect.bottom) / (h * 0.55) + 1));
       var t, o;
@@ -31,8 +31,7 @@
         t = 'perspective(1400px) translateY(' + (-exit * 60).toFixed(1) + 'px) rotateX(' + (-exit * 20).toFixed(2) + 'deg)';
         o = 1 - exit;
       } else {
-        r.style.transformOrigin = '50% 0%';
-        t = 'perspective(1400px) translateY(' + ((1 - enter) * 80).toFixed(1) + 'px) rotateX(' + ((1 - enter) * 20).toFixed(2) + 'deg)';
+        t = 'none';
         o = enter;
       }
       r.style.transform = t;
