@@ -20,7 +20,7 @@ permalink: /experience/
 ## Princeton University
 <p class="meta">Associate Research Scholar · 2024 – present</p>
 
-I lead development of [`cna-maste`](https://github.com/raphael-group/cna_maste), open-source software that detects cancer copy-number aberrations — gains and losses of DNA that drive tumors — in high-resolution spatial transcriptomics (10x VisiumHD, Illumina StrataMap).
+I lead development of [`cna-maste`](https://github.com/raphael-group/cna_maste), open-source software that detects cancer copy-number aberrations — gains and losses of DNA that drive tumors — in high-resolution spatial transcriptomics ([10x VisiumHD](https://www.10xgenomics.com/platforms/visium/product-family), [Illumina StrataMap](https://www.illumina.com/products/by-brand/stratamap.html)).
 
 It improves sensitivity and recall by ~25% over existing methods and scales to ~100K spatial locations in minutes, using sparsity, graph cuts, JAX and inductive bias. Validated on simulations and an ovarian cancer sample; first-author manuscript submitted.
 </div>
