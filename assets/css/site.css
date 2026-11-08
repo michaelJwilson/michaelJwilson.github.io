@@ -194,20 +194,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .role .figure { margin-top: 1.4em; }
 }
 
-/* Experience: one role at a time (enabled by assets/js/reveal.js).
-   Each role holds the screen while you scroll, then fades out to black;
-   the next one rolls in from the bottom. No card boxes. */
+/* Experience: roles scroll normally; each rolls out as it leaves the top,
+   a black gap bridges to the next, which rolls in from the bottom.
+   Driven by assets/js/reveal.js. No card boxes. */
 body.inner.scene-page .backdrop { filter: brightness(.08) blur(2px); }
 .scene-page .panel.wide { background: transparent; border: 0; box-shadow: none; }
-.scene-on .role { display: block; position: relative; margin: 0; padding: 0; border: 0; height: 190vh; }
-.scene-on .role:last-of-type { height: 120vh; }
-.scene-on .role-stage {
-  position: sticky; top: var(--stick-top, 96px); height: calc(100vh - var(--stick-top, 96px));
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; align-items: center;
-  transform-origin: 50% 100%; will-change: transform, opacity;
-}
-.scene-on.scene-flat .role { height: auto; margin-bottom: 64px; }
-.scene-on.scene-flat .role-stage { position: relative; top: auto; height: auto; grid-template-columns: 1fr; }
+.scene-on .role { margin: 0 0 45vh; padding: 0; border: 0; will-change: transform, opacity; }
+.scene-on .role:last-of-type { margin-bottom: 8vh; }
 
 /* Publications: grouped by year, rows like the talks tables */
 .pub-list { list-style: none; padding: 0; margin: 0; }

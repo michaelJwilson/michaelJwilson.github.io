@@ -20,12 +20,12 @@ permalink: /experience/
 ## Princeton University
 <p class="meta">Associate Research Scholar · 2024 – present</p>
 
-I lead development of [`cna-maste`](https://github.com/raphael-group/cna_maste), open-source software that detects cancer copy-number aberrations — gains and losses of DNA that drive tumors — in high-resolution spatial transcriptomics ([10x VisiumHD](https://www.10xgenomics.com/platforms/visium/product-family), [Illumina StrataMap](https://www.illumina.com/products/by-brand/stratamap.html)).
+I lead development of [`cna-maste`](https://github.com/raphael-group/cna_maste), open-source software that detects cancer [copy-number aberrations](https://www.genome.gov/genetics-glossary/Copy-Number-Variation-CNV) — gains and losses of DNA that drive tumors — in high-resolution spatial transcriptomics ([10x VisiumHD](https://www.10xgenomics.com/platforms/visium/product-family), [Illumina StrataMap](https://www.illumina.com/products/by-brand/stratamap.html)).
 
 It improves sensitivity and recall by ~25% over existing methods and scales to ~100K spatial locations in minutes, using sparsity, graph cuts, JAX and inductive bias. Validated on simulations and an ovarian cancer sample; first-author manuscript submitted.
 </div>
 <div class="role-figure">
-{% include figure.html src="/assets/img/experience/princeton-spatial.jpg" alt="Spatial transcriptomics map of a tumor tissue section, coloured by region" caption="Spatial transcriptomics of a tumor tissue section, coloured by region." %}
+{% include figure.html src="/assets/img/experience/princeton-spatial.jpg" alt="Spatial transcriptomics map of a tumor tissue section, coloured by region" %}
 </div>
 </section>
 
@@ -34,12 +34,12 @@ It improves sensitivity and recall by ~25% over existing methods and scales to ~
 ## biomodal
 <p class="meta">Computational Scientist · Cambridge, UK · 2022 – 2023</p>
 
-I was a core developer of biomodal's flagship allele-specific methylation software, taking it from prototype to a commercial product: read pre-processing and QC, statistical calling, analysis and reporting.
+I was a core developer of biomodal's flagship [allele-specific methylation](https://biomodal.com/technology/variant-associated-methylation/) software, taking it from prototype to a commercial product: read pre-processing and QC, statistical calling, analysis and reporting.
 
 I also led analysis of protocol performance and biological validation, presented at AGBT, Biology of Genomes and the [Seqera (Nextflow) Summit](https://summit.nextflow.io/2023/barcelona/speakers/michael-wilson/), and built a reproducible Nextflow pipeline on GCP to classify colorectal cancer from epigenetic sequencing (submitted to PNAS).
 </div>
 <div class="role-figure">
-{% include figure.html src="/assets/img/experience/biomodal-genome-forest.jpg" alt="Sight lines passing through a 3D map of clouds, as in the Lyman-alpha forest; here each sight line stands for a sequenced genome" caption="Population-wide DNA methylation, by analogy with the Lyman-α forest: each sight line is a genome, and methylation read along many genomes maps the population-wide landscape, as quasar sight lines map intergalactic gas." %}
+{% include figure.html src="/assets/img/experience/biomodal-genome-forest.jpg" alt="Sight lines passing through a 3D map of clouds, as in the Lyman-alpha forest; here each sight line stands for a sequenced genome" %}
 </div>
 </section>
 
