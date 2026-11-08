@@ -1,40 +1,61 @@
-// Experience page: one role at a time, centred on screen.
-// Opacity follows scroll: a role is fully visible while it is near the
-// middle of the screen, fades out as it moves away, the screen is briefly
-// black between roles, and the next fades in as it reaches the middle.
-// No movement other than normal scrolling.
+// Experience page: roles stay fixed in the centre of the screen; scrolling
+// (mouse wheel, trackpad, keys) only drives a crossfade between them:
+// fade in, hold, fade out, a moment of black, then the next role.
+// Falls back to a normal page if a role doesn't fit on screen (e.g. phones),
+// for reduced motion, or without JavaScript.
 (function () {
   var roles = [].slice.call(document.querySelectorAll('.role'));
-  if (!roles.length) return;
+  if (roles.length < 2) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var root = document.documentElement;
   var bar = document.querySelector('.topbar');
-  root.classList.add('scene-on');
+  var parent = roles[0].parentNode;
 
-  function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
-  function smooth(x) { return x * x * (3 - 2 * x); }
-  var top = 0, view = 0;
+  var track = document.createElement('div'); track.className = 'scene-track';
+  var stage = document.createElement('div'); stage.className = 'scene-stage';
+  track.appendChild(stage);
+
+  var SEG = 1.1;          // screen-heights of scrolling per role
+  var on = false, top = 0, view = 0;
+
+  function enable() {
+    parent.insertBefore(track, roles[0]);
+    roles.forEach(function (r) { stage.appendChild(r); });
+    root.classList.add('scene-on'); on = true;
+  }
+  function disable() {
+    roles.forEach(function (r) { parent.insertBefore(r, track); r.style.opacity = ''; r.style.visibility = ''; });
+    if (track.parentNode) track.parentNode.removeChild(track);
+    root.classList.remove('scene-on'); on = false;
+  }
 
   function layout() {
     top = bar ? bar.offsetHeight : 0;
     view = window.innerHeight - top;
-    // Padding so the first role starts centred and the last can be centred.
-    var first = roles[0].offsetHeight, last = roles[roles.length - 1].offsetHeight;
-    root.style.setProperty('--pad-top', Math.max(0, (view - first) / 2) + 'px');
-    root.style.setProperty('--pad-bottom', Math.max(0, (view - last) / 2) + 'px');
+    root.style.setProperty('--stick-top', top + 'px');
+    if (on) disable();
+    var fits = window.innerWidth >= 860 && roles.every(function (r) { return r.offsetHeight <= view - 24; });
+    if (!fits) return;
+    enable();
+    track.style.height = (view + (roles.length - 1) * SEG * view) + 'px';
     update();
   }
 
+  function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function smooth(x) { return x * x * (3 - 2 * x); }
+
   function update() {
-    var mid = top + view / 2;
-    roles.forEach(function (r) {
-      var rect = r.getBoundingClientRect();
-      var c = rect.top + rect.height / 2;
-      // Hold fully visible within this distance of the centre, then fade.
-      var hold = Math.max(0, (view - rect.height) / 2) * 0.35 + view * 0.06;
-      var fade = view * 0.22;
-      var d = Math.abs(c - mid);
-      r.style.opacity = (1 - smooth(clamp((d - hold) / fade))).toFixed(3);
+    if (!on) return;
+    var scrolled = top - track.getBoundingClientRect().top;
+    var p = clamp(scrolled / ((roles.length - 1) * SEG * view)) * (roles.length - 1);
+    roles.forEach(function (r, i) {
+      // Transition between role k and k+1 spans p in [k, k+1]:
+      // hold to 0.25, fade out to 0.45, black to 0.55, fade in to 0.75, hold.
+      var d = p - i, o;
+      if (d >= 0) o = i === roles.length - 1 ? 1 : 1 - smooth(clamp((d - 0.25) / 0.2));
+      else        o = smooth(clamp((d + 0.45) / 0.2));
+      r.style.opacity = o.toFixed(3);
+      r.style.visibility = o > 0.01 ? 'visible' : 'hidden';
     });
   }
 

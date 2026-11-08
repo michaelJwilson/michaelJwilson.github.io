@@ -199,9 +199,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
    Driven by assets/js/reveal.js. No card boxes. */
 body.inner.scene-page .backdrop { filter: brightness(.08) blur(2px); }
 .scene-page .panel.wide { background: transparent; border: 0; box-shadow: none; }
-.scene-on .role { margin: 0 0 60vh; padding: 0; border: 0; will-change: opacity; }
-.scene-on .role:last-of-type { margin-bottom: 0; }
-.scene-on .panel.wide { margin-top: 0; margin-bottom: 0; padding-top: var(--pad-top, 0); padding-bottom: var(--pad-bottom, 0); }
+.scene-on .panel.wide { margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; }
+.scene-track { position: relative; }
+.scene-stage { position: sticky; top: var(--stick-top, 80px); height: calc(100vh - var(--stick-top, 80px)); }
+.scene-on .scene-stage .role {
+  position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%);
+  margin: 0; padding: 0; border: 0; opacity: 0; visibility: hidden; will-change: opacity;
+}
 
 /* Publications: grouped by year, rows like the talks tables */
 .pub-list { list-style: none; padding: 0; margin: 0; }
