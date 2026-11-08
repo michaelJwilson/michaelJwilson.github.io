@@ -224,3 +224,12 @@ body.inner.scene-page .backdrop { filter: brightness(.08) blur(2px); }
 .role h2 { line-height: 1.4; margin-bottom: .1em; }
 .role .role-figure { padding-top: .22em; } /* photo top level with the employer heading */
 @media (max-width: 860px) { .role .role-figure { padding-top: 0; } }
+
+/* Justified body text (with hyphenation to avoid wide gaps) */
+.panel p, .panel li, .card p, .pub-title, .pub-meta {
+  text-align: justify; hyphens: auto; -webkit-hyphens: auto;
+}
+.panel .meta, .panel .buttons, .figure figcaption, .talks td { text-align: left; hyphens: manual; }
+.figure figcaption { text-align: center; }
+.talks .talk-month { text-align: right; }
+@media (max-width: 700px) { .talks .talk-month { text-align: left; } }
