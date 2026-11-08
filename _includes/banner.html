@@ -1,0 +1,5 @@
+{%- comment -%}
+  Wide image at the top of a section.
+  {% include banner.html src="/assets/img/experience/princeton.jpg" alt="What it shows" %}
+{%- endcomment -%}
+<img class="banner" src="{{ include.src | relative_url }}" alt="{{ include.alt }}" loading="lazy">

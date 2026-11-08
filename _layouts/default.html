@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="inner">
+  <div class="backdrop" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img class="avatar" src="{{ site.profile_image | relative_url }}" alt="Photo of {{ site.title }}">
+        <span class="brand-name">{{ site.title }}{% if site.postnominal %}<span class="postnominal">, {{ site.postnominal }}</span>{% endif %}</span>
+      </a>
+      <nav class="button-row small" aria-label="Main">
+        {% for item in site.data.navigation %}
+          {% assign active = false %}
+          {% if item.url == "/" %}{% if page.url == "/" %}{% assign active = true %}{% endif %}
+          {% elsif page.url contains item.url %}{% assign active = true %}{% endif %}
+          <a href="{{ item.url | relative_url }}"{% if active %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+  <main class="panel">
+    <h1 class="panel-title">{{ page.title }}</h1>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

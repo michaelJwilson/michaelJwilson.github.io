@@ -1,3 +1,25 @@
-theme: jekyll-theme-minimal
-title: Michael J. Wilson's homepage
-description: Intro. to me and my mission
+title: Michael J. Wilson
+# Shown after the name, in normal case (not capitals)
+postnominal: PhD
+tagline: Computational physicist & data scientist
+subtitle:
+  - Statistical models · High-performance software · Data pipelines
+  - Genomics · Physics
+location: Princeton, NJ · Open to NYC
+description: Statistical models, high-performance software and production data pipelines for genomics and physics.
+
+# Full-screen background image (any dark image works)
+background_image: /assets/img/background.jpg
+# Shown small in the footer; leave empty to hide
+background_credit: "Background: DESI 3D map of the Universe (DESI collaboration)"
+
+# Photo shown top-left on every page. To use your own, add the file
+# (e.g. assets/img/profile.jpg) and point this at it.
+profile_image: /assets/img/profile.svg
+
+email: wilson.michael.j.22@gmail.com
+github: michaelJwilson
+linkedin: https://www.linkedin.com/in/michael-wilson-62a224b7
+
+exclude:
+  - LICENSE

@@ -1,0 +1,12 @@
+# Tabs, in order. "Home" shows in the top bar on inner pages;
+# the landing page shows the rest as buttons.
+- title: Home
+  url: /
+- title: About
+  url: /about/
+- title: Experience
+  url: /experience/
+- title: Publications
+  url: /publications/
+- title: CV
+  url: /cv/
