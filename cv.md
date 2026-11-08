@@ -19,6 +19,6 @@ permalink: /cv/
 - **PhD in Physics**, University of Edinburgh (UK)
 - **Master of Physics, First Class Honours**, University of Oxford (UK)
 
-{% include figure.html src="/assets/img/education/oxford.jpg" alt="The Radcliffe Camera and Oxford rooftops on a sunny day" caption="Oxford, with the Radcliffe Camera." %}
+{% include figure.html src="/assets/img/education/oxford.jpg" alt="The Radcliffe Camera and All Souls College in Oxford, with bicycles along the railings" caption="Oxford: the Radcliffe Camera and All Souls College." %}
 
 Princeton, NJ · Open to NYC (onsite/hybrid) · US Permanent Resident
