@@ -25,9 +25,17 @@ img { max-width: 100%; height: auto; }
 /* Fixed background image; dimmer on inner pages */
 .backdrop {
   position: fixed; inset: 0; z-index: -1;
-  background: linear-gradient(rgba(12, 15, 20, .15), rgba(12, 15, 20, .45)), var(--bg-image) center / cover no-repeat;
+  background: linear-gradient(rgba(12, 15, 20, .05), rgba(12, 15, 20, .25)), var(--bg-image) center / cover no-repeat;
 }
 body.inner .backdrop { filter: brightness(.55) blur(2px); transform: scale(1.02); }
+/* Landing page: soft dark glow behind the central text, dots stay bright elsewhere */
+body.home .backdrop::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 38% 30% at 50% 47%, rgba(10, 12, 16, .78), rgba(10, 12, 16, .45) 55%, transparent 100%);
+}
+@media (max-width: 700px) {
+  body.home .backdrop::after { background: radial-gradient(ellipse 75% 32% at 50% 42%, rgba(10, 12, 16, .8), rgba(10, 12, 16, .45) 60%, transparent 100%); }
+}
 
 /* Outlined button row (landing) and tabs (inner pages) */
 .button-row { display: inline-flex; flex-wrap: wrap; justify-content: center; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
@@ -62,7 +70,10 @@ body.inner .backdrop { filter: brightness(.55) blur(2px); transform: scale(1.02)
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-sub { display: flex; flex-direction: column; gap: .25em; margin-bottom: 2.6em; }
-.hero-sub span { color: var(--muted); font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; }
+/* Keep landing text readable over the bright survey dots */
+.hero-name, .hero-sub span { text-shadow: 0 0 2px rgba(8, 10, 14, .95), 0 1px 14px rgba(8, 10, 14, .95), 0 0 30px rgba(8, 10, 14, .8); }
+.hero-tagline { filter: drop-shadow(0 0 2px rgba(8, 10, 14, .95)) drop-shadow(0 1px 10px rgba(8, 10, 14, .9)); }
+.hero-sub span { color: rgba(255, 255, 255, .78); font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; }
 .hero-sub .hero-location { margin-top: .9em; color: var(--text); }
 .hero .button-row { background: rgba(12, 15, 20, .35); backdrop-filter: blur(4px); }
 
