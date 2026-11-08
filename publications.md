@@ -2,6 +2,9 @@
 layout: default
 title: Publications
 permalink: /publications/
+# Page-specific background (Nassau Hall, recoloured to match the survey map)
+background_image: /assets/img/background-princeton.jpg
+background_credit: "Background: Nassau Hall, Princeton University"
 ---
 
 Publications as first author or as core contributor.
