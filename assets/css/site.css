@@ -194,23 +194,18 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .role .figure { margin-top: 1.4em; }
 }
 
-/* Experience slide-in (enabled by assets/js/reveal.js) */
-.reveal-on .role .role-text,
-.reveal-on .role .role-figure {
-  opacity: 0;
-  transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1);
+/* Experience: stacked sticky cards (enabled by assets/js/reveal.js).
+   Each role sticks below the top bar; the next one folds up from the
+   bottom and slides over it, while the one underneath recedes. */
+.stack-on .role {
+  position: sticky; top: var(--stick-top, 96px);
+  margin: 0 0 22vh; padding: 30px 34px; border: 1px solid rgba(255, 255, 255, .09); border-top: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 10px; background: #12161d; box-shadow: 0 -12px 40px rgba(0, 0, 0, .45);
+  transform-origin: 50% 0; will-change: transform, filter;
 }
-.reveal-on .role .role-text { transform: translateX(-48px); }
-.reveal-on .role .role-figure { transform: translateX(48px); transition-delay: .12s; }
-.reveal-on .role:nth-of-type(even) .role-text { transform: translateX(48px); }
-.reveal-on .role:nth-of-type(even) .role-figure { transform: translateX(-48px); }
-.reveal-on .role.in-view .role-text,
-.reveal-on .role.in-view .role-figure { opacity: 1; transform: none; }
-@media (max-width: 860px) {
-  .reveal-on .role .role-text, .reveal-on .role:nth-of-type(even) .role-text,
-  .reveal-on .role .role-figure, .reveal-on .role:nth-of-type(even) .role-figure { transform: translateY(28px); }
-}
-.reveal-on body { overflow-x: clip; }
+.stack-on .role:first-of-type { padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, .09); }
+.stack-on .role:last-of-type { margin-bottom: 0; }
+.stack-on .role.no-stick { position: relative; top: auto; margin-bottom: 28px; }
 
 /* Publications: grouped by year, rows like the talks tables */
 .pub-list { list-style: none; padding: 0; margin: 0; }
