@@ -1,0 +1,8 @@
+{%- comment -%}
+  Usage in any page:
+  {% include figure.html src="/assets/img/experience/princeton.png" alt="What it shows" caption="Optional caption" %}
+{%- endcomment -%}
+<figure class="figure">
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption }}" loading="lazy">
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

@@ -1,3 +1,14 @@
-theme: jekyll-theme-minimal
-title: Michael J. Wilson, PhD
-description: Computational physicist and data scientist — statistical models, high-performance software and production data pipelines for genomics and physics.
+title: Michael J. Wilson
+tagline: Computational physicist & data scientist
+description: Statistical models, high-performance software and production data pipelines for genomics and physics.
+
+# Photo shown top-left on every page. To use your own, add the file
+# (e.g. assets/img/profile.jpg) and point this at it.
+profile_image: /assets/img/profile.svg
+
+email: wilson.michael.j.22@gmail.com
+github: michaelJwilson
+linkedin: https://www.linkedin.com/in/michael-wilson-62a224b7
+
+exclude:
+  - LICENSE
