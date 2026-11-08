@@ -6,4 +6,5 @@
   <a href="{{ site.linkedin }}">LinkedIn</a>
   <span aria-hidden="true">·</span>
   <a href="{{ '/assets/Michael_J_Wilson_CV.pdf' | relative_url }}">CV (PDF)</a>
+  {% if site.background_credit != "" and site.background_credit %}<p class="credit">{{ site.background_credit }}</p>{% endif %}
 </footer>

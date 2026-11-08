@@ -133,6 +133,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: #fff; }
 .site-footer span { margin: 0 .5em; }
+.site-footer .credit { margin: .8em 0 0; font-size: .62rem; letter-spacing: .14em; opacity: .7; }
 
 @media (max-width: 700px) {
   body { font-size: 16px; }

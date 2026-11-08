@@ -8,6 +8,8 @@ description: Statistical models, high-performance software and production data p
 
 # Full-screen background image (any dark image works)
 background_image: /assets/img/background.jpg
+# Shown small in the footer; leave empty to hide
+background_credit: "Background: DESI 3D map of the Universe (DESI collaboration)"
 
 # Photo shown top-left on every page. To use your own, add the file
 # (e.g. assets/img/profile.jpg) and point this at it.
