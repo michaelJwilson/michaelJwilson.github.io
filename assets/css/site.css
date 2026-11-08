@@ -197,7 +197,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 /* Experience: roles scroll normally; each rolls out as it leaves the top,
    a black gap bridges to the next, which rolls in from the bottom.
    Driven by assets/js/reveal.js. No card boxes. */
-body.inner.scene-page .backdrop { filter: brightness(.08) blur(2px); }
+body.inner.scene-page .backdrop { filter: brightness(.38) saturate(1.1) blur(1.5px); }
 .scene-page .panel.wide { background: transparent; border: 0; box-shadow: none; }
 .scene-on .panel.wide { margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; }
 .scene-track { position: relative; }
