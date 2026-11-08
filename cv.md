@@ -5,7 +5,7 @@ permalink: /cv/
 ---
 
 <div class="buttons center">
-  <a class="button primary" href="{{ '/assets/Michael_J_Wilson_CV.pdf' | relative_url }}">Download CV</a>
+  <a class="button primary" href="{{ '/assets/Michael_J_Wilson_CV.pdf' | relative_url }}">Download</a>
 </div>
 
 ## Technical skills

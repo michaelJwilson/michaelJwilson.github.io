@@ -3,7 +3,7 @@
 <head>
   {% include head.html %}
 </head>
-<body class="inner">
+<body class="inner{% if page.wide %} scene-page{% endif %}">
   <div class="backdrop" aria-hidden="true"></div>
   <header class="topbar">
     <div class="topbar-inner">
@@ -22,7 +22,7 @@
     </div>
   </header>
   <main class="panel{% if page.wide %} wide{% endif %}">
-    <h1 class="panel-title">{{ page.title }}</h1>
+    {% unless page.hide_title %}<h1 class="panel-title">{{ page.title }}</h1>{% endunless %}
     {{ content }}
   </main>
   {% include footer.html %}

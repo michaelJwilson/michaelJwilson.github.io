@@ -1,48 +1,61 @@
-// Experience page: stacked sticky cards.
-// Each role sticks below the top bar; the next one folds up from the bottom
-// (a slight backward tilt that flattens as it rises) and slides over it,
-// while the covered card shrinks and dims a little.
+// Experience page: roles stay fixed in the centre of the screen; scrolling
+// (mouse wheel, trackpad, keys) only drives a crossfade between them:
+// fade in, hold, fade out, a moment of black, then the next role.
+// Falls back to a normal page if a role doesn't fit on screen (e.g. phones),
+// for reduced motion, or without JavaScript.
 (function () {
   var roles = [].slice.call(document.querySelectorAll('.role'));
-  if (!roles.length) return;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (roles.length < 2) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var root = document.documentElement;
-  root.classList.add('stack-on');
   var bar = document.querySelector('.topbar');
-  var top = 0;
+  var parent = roles[0].parentNode;
+
+  var track = document.createElement('div'); track.className = 'scene-track';
+  var stage = document.createElement('div'); stage.className = 'scene-stage';
+  track.appendChild(stage);
+
+  var SEG = 2.0;          // screen-heights of scrolling per role
+  var on = false, top = 0, view = 0;
+
+  function enable() {
+    parent.insertBefore(track, roles[0]);
+    roles.forEach(function (r) { stage.appendChild(r); });
+    root.classList.add('scene-on'); on = true;
+  }
+  function disable() {
+    roles.forEach(function (r) { parent.insertBefore(r, track); r.style.opacity = ''; r.style.visibility = ''; });
+    if (track.parentNode) track.parentNode.removeChild(track);
+    root.classList.remove('scene-on'); on = false;
+  }
 
   function layout() {
-    top = (bar ? bar.offsetHeight : 0) + 16;
+    top = bar ? bar.offsetHeight : 0;
+    view = window.innerHeight - top;
     root.style.setProperty('--stick-top', top + 'px');
-    roles.forEach(function (r) {
-      // Only stick cards on wide screens, and only if they fit; otherwise they
-      // scroll normally and just fold in.
-      r.classList.toggle('no-stick', window.innerWidth < 860 || r.offsetHeight > window.innerHeight - top - 16);
-    });
+    if (on) disable();
+    var fits = window.innerWidth >= 860 && roles.every(function (r) { return r.offsetHeight <= view - 24; });
+    if (!fits) return;
+    enable();
+    track.style.height = (view + (roles.length - 1) * SEG * view) + 'px';
     update();
   }
 
   function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function smooth(x) { return x * x * (3 - 2 * x); }
 
   function update() {
-    if (reduce) return;
-    var vh = window.innerHeight;
+    if (!on) return;
+    var scrolled = top - track.getBoundingClientRect().top;
+    var p = clamp(scrolled / ((roles.length - 1) * SEG * view)) * (roles.length - 1);
     roles.forEach(function (r, i) {
-      var rect = r.getBoundingClientRect();
-      // Entering: fold up from the bottom over the last 45% of the screen.
-      var enter = clamp((vh - rect.top) / (vh * 0.45));
-      var tilt = (1 - enter) * 14;            // degrees
-      var lift = (1 - enter) * 40;            // px
-      // Covered: how far the next card has slid over this one.
-      var cover = 0, next = roles[i + 1];
-      if (next && !r.classList.contains('no-stick')) {
-        var nTop = next.getBoundingClientRect().top;
-        cover = clamp((rect.top + rect.height - nTop) / rect.height);
-      }
-      var scale = 1 - 0.06 * cover;
-      r.style.transform = 'perspective(1400px) translateY(' + lift.toFixed(1) + 'px) rotateX(' + tilt.toFixed(2) + 'deg) scale(' + scale.toFixed(4) + ')';
-      r.style.opacity = (0.35 + 0.65 * enter).toFixed(3);
-      r.style.filter = cover > 0 ? 'brightness(' + (1 - 0.45 * cover).toFixed(3) + ')' : '';
+      // Transition between role k and k+1 spans p in [k, k+1]:
+      // hold to 0.15, slow fade out to 0.45, black to 0.55, slow fade in to 0.85.
+      var d = p - i, o;
+      if (d >= 0) o = i === roles.length - 1 ? 1 : 1 - smooth(clamp((d - 0.15) / 0.3));
+      else        o = smooth(clamp((d + 0.45) / 0.3));
+      r.style.opacity = o.toFixed(3);
+      r.style.visibility = o > 0.01 ? 'visible' : 'hidden';
     });
   }
 
