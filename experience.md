@@ -42,7 +42,7 @@ I also led analysis of protocol performance and biological validation, presented
 
 I built the inference pipeline for the DESI Bright Galaxy Survey luminosity function — how many galaxies exist at each brightness — on HPC for 10M+ objects, published in MNRAS (2026).
 
-{% include figure.html src="/assets/img/experience/durham-telescope.jpg" alt="Inside the dome of the Mayall Telescope, which hosts DESI" caption="The Mayall Telescope at Kitt Peak, home of the DESI instrument." %}
+{% include figure.html src="/assets/img/experience/durham-telescope.jpg" alt="The Mayall Telescope dome on Kitt Peak under a starry sky at dusk" caption="The Mayall Telescope at Kitt Peak, home of the DESI instrument." %}
 </section>
 
 <section class="role" id="berkeley" markdown="1">
@@ -59,4 +59,6 @@ I co-led the Bright Galaxy Survey team for the $70M DESI experiment, owning scie
 <p class="meta">PhD in Physics · UK · 2012 – 2017</p>
 
 I designed a calibration method with 1,000× faster runtime for galaxy-survey inference, adopted as standard by major collaborations, and measured the cosmic growth rate from the VIPERS survey to ~10% precision.
+
+{% include figure.html src="/assets/img/experience/edinburgh.jpg" alt="Edinburgh skyline from Calton Hill, with the castle and the Dugald Stewart Monument" caption="Edinburgh, from Calton Hill." %}
 </section>
