@@ -33,7 +33,7 @@ I was a core developer of biomodal's flagship allele-specific methylation softwa
 
 I also led analysis of protocol performance and biological validation, presented at AGBT, Biology of Genomes and the Seqera (Nextflow) Summit, and built a reproducible Nextflow pipeline on GCP to classify colorectal cancer from epigenetic sequencing (submitted to PNAS).
 
-{% include figure.html src="/assets/img/experience/biomodal-genome-forest.jpg" alt="Five white DNA double helices passing as sight lines through a 3D map of clouds, as in the Lyman-alpha forest" caption="Population-wide DNA methylation, by analogy with the Lyman-α forest: each sight line is a genome, and methylation read along many genomes maps the population-wide landscape, as quasar sight lines map intergalactic gas." %}
+{% include figure.html src="/assets/img/experience/biomodal-genome-forest.jpg" alt="Sight lines passing through a 3D map of clouds, as in the Lyman-alpha forest; here each sight line stands for a sequenced genome" caption="Population-wide DNA methylation, by analogy with the Lyman-α forest: each sight line is a genome, and methylation read along many genomes maps the population-wide landscape, as quasar sight lines map intergalactic gas." %}
 </section>
 
 <section class="role" id="durham" markdown="1">
