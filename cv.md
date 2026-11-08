@@ -21,4 +21,4 @@ permalink: /cv/
 
 {% include figure.html src="/assets/img/education/oxford.jpg" alt="The Radcliffe Camera and All Souls College in Oxford, with bicycles along the railings" caption="Oxford: the Radcliffe Camera and All Souls College." %}
 
-Princeton, NJ · Open to NYC (onsite/hybrid) · US Permanent Resident
+Princeton, NJ · Open to NYC & Philadelphia (onsite/hybrid) · US Permanent Resident

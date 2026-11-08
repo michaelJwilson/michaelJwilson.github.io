@@ -66,7 +66,7 @@ body.home .backdrop::after {
 }
 .hero-tagline {
   margin: 0 0 1.2em; font-size: .95rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase;
-  background: linear-gradient(90deg, #fbbf24, #fb923c, #f472b6); /* amber → orange → pink */
+  background: linear-gradient(90deg, #fbbf24, #fbbf24); /* solid amber */
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-sub { display: flex; flex-direction: column; gap: .25em; margin-bottom: 2.6em; }
@@ -172,3 +172,17 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .pubs a em { color: var(--text); }
 .pubs a:hover em { color: #fff; }
 @media (max-width: 700px) { .talks li { flex-direction: column; gap: .1em; } }
+
+/* Wider panel for pages with side-by-side figures */
+.panel.wide { max-width: 1120px; }
+
+/* Experience: text and figure side by side, figure side alternates */
+.role { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; align-items: center; }
+.role .role-text > :last-child { margin-bottom: 0; }
+.role .figure { margin: 0; }
+.role:nth-of-type(even) .role-figure { order: -1; }
+@media (max-width: 860px) {
+  .role { grid-template-columns: 1fr; }
+  .role:nth-of-type(even) .role-figure { order: 0; }
+  .role .figure { margin-top: 1.4em; }
+}
