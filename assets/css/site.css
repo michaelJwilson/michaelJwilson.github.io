@@ -194,18 +194,20 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .role .figure { margin-top: 1.4em; }
 }
 
-/* Experience: stacked sticky cards (enabled by assets/js/reveal.js).
-   Each role sticks below the top bar; the next one folds up from the
-   bottom and slides over it, while the one underneath recedes. */
-.stack-on .role {
-  position: sticky; top: var(--stick-top, 96px);
-  margin: 0 0 22vh; padding: 30px 34px; border: 1px solid rgba(255, 255, 255, .09); border-top: 1px solid rgba(255, 255, 255, .09);
-  border-radius: 10px; background: #12161d; box-shadow: 0 -12px 40px rgba(0, 0, 0, .45);
-  transform-origin: 50% 0; will-change: transform, filter;
+/* Experience: one role at a time (enabled by assets/js/reveal.js).
+   Each role holds the screen while you scroll, then fades out to black;
+   the next one rolls in from the bottom. No card boxes. */
+body.inner.scene-page .backdrop { filter: brightness(.08) blur(2px); }
+.scene-page .panel.wide { background: transparent; border: 0; box-shadow: none; }
+.scene-on .role { display: block; position: relative; margin: 0; padding: 0; border: 0; height: 190vh; }
+.scene-on .role:last-of-type { height: 120vh; }
+.scene-on .role-stage {
+  position: sticky; top: var(--stick-top, 96px); height: calc(100vh - var(--stick-top, 96px));
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; align-items: center;
+  transform-origin: 50% 100%; will-change: transform, opacity;
 }
-.stack-on .role:first-of-type { padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, .09); }
-.stack-on .role:last-of-type { margin-bottom: 0; }
-.stack-on .role.no-stick { position: relative; top: auto; margin-bottom: 28px; }
+.scene-on.scene-flat .role { height: auto; margin-bottom: 64px; }
+.scene-on.scene-flat .role-stage { position: relative; top: auto; height: auto; grid-template-columns: 1fr; }
 
 /* Publications: grouped by year, rows like the talks tables */
 .pub-list { list-style: none; padding: 0; margin: 0; }

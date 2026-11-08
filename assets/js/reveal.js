@@ -1,48 +1,60 @@
-// Experience page: stacked sticky cards.
-// Each role sticks below the top bar; the next one folds up from the bottom
-// (a slight backward tilt that flattens as it rises) and slides over it,
-// while the covered card shrinks and dims a little.
+// Experience page: one role at a time.
+// Each role holds the screen while you scroll; then a short fade to black,
+// and the next role rolls in from the bottom (tilted back, flattening as it
+// rises). On narrow screens roles scroll normally and just roll in.
 (function () {
   var roles = [].slice.call(document.querySelectorAll('.role'));
   if (!roles.length) return;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var root = document.documentElement;
-  root.classList.add('stack-on');
   var bar = document.querySelector('.topbar');
-  var top = 0;
+
+  // Wrap each role's content in a stage that can stick and animate.
+  var stages = roles.map(function (r) {
+    var s = document.createElement('div');
+    s.className = 'role-stage';
+    while (r.firstChild) s.appendChild(r.firstChild);
+    r.appendChild(s);
+    return s;
+  });
+  root.classList.add('scene-on');
+
+  var top = 0, flat = false;
+  function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function ease(x) { return 1 - Math.pow(1 - x, 3); }
 
   function layout() {
-    top = (bar ? bar.offsetHeight : 0) + 16;
+    top = (bar ? bar.offsetHeight : 0) + 8;
     root.style.setProperty('--stick-top', top + 'px');
-    roles.forEach(function (r) {
-      // Only stick cards on wide screens, and only if they fit; otherwise they
-      // scroll normally and just fold in.
-      r.classList.toggle('no-stick', window.innerWidth < 860 || r.offsetHeight > window.innerHeight - top - 16);
-    });
+    flat = window.innerWidth < 860;
+    root.classList.toggle('scene-flat', flat);
+    if (!flat) {
+      // If any role is too tall to fit, fall back to normal scrolling.
+      flat = stages.some(function (s) { return s.scrollHeight > window.innerHeight - top; });
+      root.classList.toggle('scene-flat', flat);
+    }
     update();
   }
 
-  function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+  function roll(s, e, fade) {
+    s.style.transform = 'perspective(1400px) translateY(' + ((1 - e) * 90).toFixed(1) + 'px) rotateX(' + ((1 - e) * 22).toFixed(2) + 'deg)';
+    s.style.opacity = (e * fade).toFixed(3);
+  }
 
   function update() {
-    if (reduce) return;
     var vh = window.innerHeight;
     roles.forEach(function (r, i) {
-      var rect = r.getBoundingClientRect();
-      // Entering: fold up from the bottom over the last 45% of the screen.
-      var enter = clamp((vh - rect.top) / (vh * 0.45));
-      var tilt = (1 - enter) * 14;            // degrees
-      var lift = (1 - enter) * 40;            // px
-      // Covered: how far the next card has slid over this one.
-      var cover = 0, next = roles[i + 1];
-      if (next && !r.classList.contains('no-stick')) {
-        var nTop = next.getBoundingClientRect().top;
-        cover = clamp((rect.top + rect.height - nTop) / rect.height);
+      var s = stages[i], rect = r.getBoundingClientRect();
+      if (flat) {                      // roll in as it enters the screen
+        roll(s, ease(clamp((vh - rect.top) / (vh * 0.4))), 1);
+        return;
       }
-      var scale = 1 - 0.06 * cover;
-      r.style.transform = 'perspective(1400px) translateY(' + lift.toFixed(1) + 'px) rotateX(' + tilt.toFixed(2) + 'deg) scale(' + scale.toFixed(4) + ')';
-      r.style.opacity = (0.35 + 0.65 * enter).toFixed(3);
-      r.style.filter = cover > 0 ? 'brightness(' + (1 - 0.45 * cover).toFixed(3) + ')' : '';
+      var span = rect.height - (vh - top);
+      var p = clamp((top - rect.top) / span);
+      var enter = i === 0 ? 1 : ease(clamp(p / 0.22));          // roll in
+      var last = i === roles.length - 1;
+      var fade = last ? 1 : 1 - clamp((p - 0.62) / 0.14);        // short fade out, then black
+      roll(s, enter, fade);
     });
   }
 

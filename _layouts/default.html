@@ -3,7 +3,7 @@
 <head>
   {% include head.html %}
 </head>
-<body class="inner">
+<body class="inner{% if page.wide %} scene-page{% endif %}">
   <div class="backdrop" aria-hidden="true"></div>
   <header class="topbar">
     <div class="topbar-inner">
