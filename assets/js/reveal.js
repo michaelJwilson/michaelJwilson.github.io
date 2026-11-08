@@ -15,7 +15,7 @@
   var stage = document.createElement('div'); stage.className = 'scene-stage';
   track.appendChild(stage);
 
-  var SEG = 1.1;          // screen-heights of scrolling per role
+  var SEG = 2.0;          // screen-heights of scrolling per role
   var on = false, top = 0, view = 0;
 
   function enable() {
@@ -50,10 +50,10 @@
     var p = clamp(scrolled / ((roles.length - 1) * SEG * view)) * (roles.length - 1);
     roles.forEach(function (r, i) {
       // Transition between role k and k+1 spans p in [k, k+1]:
-      // hold to 0.25, fade out to 0.45, black to 0.55, fade in to 0.75, hold.
+      // hold to 0.15, slow fade out to 0.45, black to 0.55, slow fade in to 0.85.
       var d = p - i, o;
-      if (d >= 0) o = i === roles.length - 1 ? 1 : 1 - smooth(clamp((d - 0.25) / 0.2));
-      else        o = smooth(clamp((d + 0.45) / 0.2));
+      if (d >= 0) o = i === roles.length - 1 ? 1 : 1 - smooth(clamp((d - 0.15) / 0.3));
+      else        o = smooth(clamp((d + 0.45) / 0.3));
       r.style.opacity = o.toFixed(3);
       r.style.visibility = o > 0.01 ? 'visible' : 'hidden';
     });
