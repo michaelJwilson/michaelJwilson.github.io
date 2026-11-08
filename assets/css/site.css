@@ -211,3 +211,15 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .reveal-on .role .role-figure, .reveal-on .role:nth-of-type(even) .role-figure { transform: translateY(28px); }
 }
 .reveal-on body { overflow-x: clip; }
+
+/* Publications: grouped by year, rows like the talks tables */
+.pub-list { list-style: none; padding: 0; margin: 0; }
+.pub-list li { padding: .6em 0; border-bottom: 1px solid rgba(255, 255, 255, .07); }
+.pub-list li:last-child { border-bottom: 0; }
+.pub-title { color: var(--text); line-height: 1.5; }
+.pub-title a { color: var(--text); }
+.pub-title a:hover { color: #fff; }
+.pub-meta { color: var(--muted); font-size: .9rem; line-height: 1.5; margin-top: .15em; }
+.pub-meta strong { color: var(--text); font-weight: 600; }
+.pub-venue { font-style: italic; }
+.buttons.center { text-align: center; }

@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-<p class="lede">As a computational physicist and data scientist, I build statistical models, high-performance software and production data pipelines — most recently for cancer genomics, and before that for some of the largest galaxy surveys ever made.</p>
+<p class="lede">As a computational physicist and data scientist, I build statistical inference, high-performance software and production data pipelines — most recently for cancer genomics, and previously for some of the largest galaxy surveys ever made.</p>
 
-I'm based in Princeton, NJ, and open to roles in NYC and Philadelphia (onsite or hybrid). I'm a US permanent resident.
+I'm a US permanent resident based in Princeton, NJ, and open to roles in NYC and Philadelphia (onsite or hybrid).
 
 ## Highlights
 

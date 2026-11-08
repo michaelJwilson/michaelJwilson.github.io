@@ -4,11 +4,11 @@ title: CV
 permalink: /cv/
 ---
 
-<div class="buttons">
-  <a class="button primary" href="{{ '/assets/Michael_J_Wilson_CV.pdf' | relative_url }}">Download CV (PDF)</a>
+<div class="buttons center">
+  <a class="button primary" href="{{ '/assets/Michael_J_Wilson_CV.pdf' | relative_url }}">Download CV</a>
 </div>
 
-## Skills
+## Technical skills
 
 - **Languages & libraries:** Python (pandas, polars, NumPy, SciPy, Dask), Rust, C, PyTorch, JAX
 - **Data engineering:** data cleaning, ETL, Nextflow, Docker, GCP, HPC (SLURM), Linux, Git
