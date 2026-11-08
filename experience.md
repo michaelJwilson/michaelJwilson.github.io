@@ -2,6 +2,7 @@
 layout: default
 title: Experience
 wide: true
+hide_title: true
 permalink: /experience/
 ---
 

@@ -22,7 +22,7 @@
     </div>
   </header>
   <main class="panel{% if page.wide %} wide{% endif %}">
-    <h1 class="panel-title">{{ page.title }}</h1>
+    {% unless page.hide_title %}<h1 class="panel-title">{{ page.title }}</h1>{% endunless %}
     {{ content }}
   </main>
   {% include footer.html %}

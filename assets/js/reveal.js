@@ -1,7 +1,8 @@
-// Experience page: roll-out / black / fade-in, tied to scroll position.
-// Roles scroll normally (no sticking). As a role leaves at the top it rolls
-// out (tilting forward and fading). Large gaps between roles leave a black
-// bridge; the next role then fades in quickly from black, without moving.
+// Experience page: one role at a time, centred on screen.
+// Opacity follows scroll: a role is fully visible while it is near the
+// middle of the screen, fades out as it moves away, the screen is briefly
+// black between roles, and the next fades in as it reaches the middle.
+// No movement other than normal scrolling.
 (function () {
   var roles = [].slice.call(document.querySelectorAll('.role'));
   if (!roles.length) return;
@@ -12,30 +13,28 @@
 
   function clamp(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
   function smooth(x) { return x * x * (3 - 2 * x); }
+  var top = 0, view = 0;
+
+  function layout() {
+    top = bar ? bar.offsetHeight : 0;
+    view = window.innerHeight - top;
+    // Padding so the first role starts centred and the last can be centred.
+    var first = roles[0].offsetHeight, last = roles[roles.length - 1].offsetHeight;
+    root.style.setProperty('--pad-top', Math.max(0, (view - first) / 2) + 'px');
+    root.style.setProperty('--pad-bottom', Math.max(0, (view - last) / 2) + 'px');
+    update();
+  }
 
   function update() {
-    var vh = window.innerHeight;
-    var top = bar ? bar.offsetHeight : 0;
-    var view = vh - top;
+    var mid = top + view / 2;
     roles.forEach(function (r) {
       var rect = r.getBoundingClientRect();
-      var h = Math.min(rect.height, view);
-      // Quick fade in from black: 0 when the role's top is 25% up the screen,
-      // 1 once it is 40% up (no movement)
-      var enter = smooth(clamp((vh - view * 0.25 - rect.top) / (view * 0.15)));
-      // 0 while the role's bottom is in the lower part of the view, 1 once it reaches the top bar
-      var exit = smooth(clamp((top + h * 0.55 - rect.bottom) / (h * 0.55) + 1));
-      var t, o;
-      if (exit > 0 && enter >= 1) {
-        r.style.transformOrigin = '50% 100%';
-        t = 'perspective(1400px) translateY(' + (-exit * 60).toFixed(1) + 'px) rotateX(' + (-exit * 20).toFixed(2) + 'deg)';
-        o = 1 - exit;
-      } else {
-        t = 'none';
-        o = enter;
-      }
-      r.style.transform = t;
-      r.style.opacity = o.toFixed(3);
+      var c = rect.top + rect.height / 2;
+      // Hold fully visible within this distance of the centre, then fade.
+      var hold = Math.max(0, (view - rect.height) / 2) * 0.35 + view * 0.06;
+      var fade = view * 0.22;
+      var d = Math.abs(c - mid);
+      r.style.opacity = (1 - smooth(clamp((d - hold) / fade))).toFixed(3);
     });
   }
 
@@ -43,7 +42,7 @@
   window.addEventListener('scroll', function () {
     if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; update(); }); }
   }, { passive: true });
-  window.addEventListener('resize', update);
-  window.addEventListener('load', update);
-  update();
+  window.addEventListener('resize', layout);
+  window.addEventListener('load', layout);
+  layout();
 })();
