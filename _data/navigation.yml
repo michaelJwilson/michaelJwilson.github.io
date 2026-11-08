@@ -6,10 +6,10 @@
   url: /about/
 - title: Experience
   url: /experience/
+- title: CV
+  url: /cv/
 - title: Publications
   url: /publications/
 - title: Talks
   url: /talks/
   flag: show_talks   # only shown when show_talks: true in _config.yml
-- title: CV
-  url: /cv/
