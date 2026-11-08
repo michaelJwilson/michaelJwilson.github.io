@@ -36,7 +36,7 @@ It improves sensitivity and recall by ~25% over existing methods and scales to ~
 
 I was a core developer of biomodal's flagship [allele-specific methylation](https://biomodal.com/technology/variant-associated-methylation/) software, taking it from prototype to a commercial product: read pre-processing and QC, statistical calling, analysis and reporting.
 
-I also led analysis of protocol performance and biological validation, presented at AGBT, Biology of Genomes and the [Seqera (Nextflow) Summit](https://summit.nextflow.io/2023/barcelona/speakers/michael-wilson/), and built a reproducible Nextflow pipeline on GCP to classify colorectal cancer from epigenetic sequencing (submitted to PNAS).
+I also led analysis of protocol performance and biological validation, presented at AGBT, Biology of Genomes and the [Seqera (Nextflow) Summit](https://summit.nextflow.io/2023/barcelona/speakers/michael-wilson/), and built a reproducible [Nextflow](https://www.nextflow.io) pipeline on GCP to classify colorectal cancer from epigenetic sequencing (submitted to PNAS).
 </div>
 <div class="role-figure">
 {% include figure.html src="/assets/img/experience/biomodal-genome-forest.jpg" alt="Sight lines passing through a 3D map of clouds, as in the Lyman-alpha forest; here each sight line stands for a sequenced genome" %}
@@ -60,7 +60,7 @@ I built the inference pipeline for the DESI Bright Galaxy Survey luminosity func
 ## Lawrence Berkeley National Lab
 <p class="meta">Postdoctoral Fellow · 2017 – 2021</p>
 
-I co-led the Bright Galaxy Survey team for the $70M [DESI](https://desi.lbl.gov) experiment, owning science goals, survey design and software. My target-selection algorithms run on every observation ([Hahn et al. 2022](https://iopscience.iop.org/article/10.3847/1538-3881/accff8/pdf); [Ruiz-Macias et al. 2020](https://academic.oup.com/mnras/article/502/3/4328/6127300); [Myers et al. 2023](https://iopscience.iop.org/article/10.3847/1538-3881/aca5f9/pdf)). I also led the science case for a next-generation high-redshift survey, which fed into the five-year DESI extension, and was awarded DESI "Builder" status.
+I co-led the Bright Galaxy Survey team for the $70M [DESI](https://desi.lbl.gov) experiment, owning science goals, survey design and software. My target-selection algorithms run on every observation ([Hahn et al. 2022](https://iopscience.iop.org/article/10.3847/1538-3881/accff8/pdf); [Ruiz-Macias et al. 2020](https://academic.oup.com/mnras/article/502/3/4328/6127300); [Myers et al. 2023](https://iopscience.iop.org/article/10.3847/1538-3881/aca5f9/pdf)). I also led the science case for a [next-generation high-redshift survey](https://iopscience.iop.org/article/10.1088/1475-7516/2019/10/015), incorporated as a key component of the five-year DESI-II extension, and was awarded DESI "Builder" status for critical contributions to the survey.
 </div>
 <div class="role-figure">
 {% include figure.html src="/assets/img/experience/berkeley.jpg" alt="Sather Tower at UC Berkeley at sunset, with the Golden Gate Bridge across the bay" caption="Berkeley at sunset, looking out to the Golden Gate." %}
@@ -72,7 +72,7 @@ I co-led the Bright Galaxy Survey team for the $70M [DESI](https://desi.lbl.gov)
 ## University of Edinburgh
 <p class="meta">PhD in Physics · UK · 2012 – 2017</p>
 
-I designed a calibration method with 1,000× faster runtime for galaxy-survey inference, adopted as standard by major collaborations, and measured the cosmic growth rate from the VIPERS survey to ~10% precision.
+I designed a [calibration method](http://mnras.oxfordjournals.org/content/early/2016/10/08/mnras.stw2576.abstract) with 1,000× faster runtime for galaxy-survey inference, adopted as standard by major collaborations, and measured the cosmic growth rate from the VIPERS survey to ~10% precision.
 </div>
 <div class="role-figure">
 {% include figure.html src="/assets/img/experience/edinburgh.jpg" alt="Edinburgh skyline from Calton Hill, with the castle and the Dugald Stewart Monument" caption="Edinburgh, from Calton Hill." %}
