@@ -3,8 +3,6 @@ layout: default
 title: Experience
 wide: true
 hide_title: true
-background_image: /assets/img/background-nyc.jpg
-background_credit: "Background: Manhattan at night"
 permalink: /experience/
 ---
 
