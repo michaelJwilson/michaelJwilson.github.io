@@ -13,15 +13,15 @@ I'm a US permanent resident based in Princeton, NJ, and open to roles in NYC and
 <div class="cards">
   <a class="card" style="--c: var(--accent)" href="{{ '/experience/#princeton' | relative_url }}">
     <h3>Cancer genomics at scale</h3>
-    <p>Lead developer of <code>cna-maste</code>, for the detection of abnormal DNA or RNA amounts due to cancer, in tissue slices of 100K pixels, in minutes.</p>
+    <p>Lead developer of <code>cna-maste</code>, open-source software that finds cancer-driven DNA gains and losses in spatial maps of gene expression, analyzing 100K-pixel tissue slices in minutes with ~25% better accuracy than existing tools.</p>
   </a>
   <a class="card" style="--c: var(--accent-2)" href="{{ '/experience/#biomodal' | relative_url }}">
     <h3>From prototype to product</h3>
-    <p>Built the analysis, validation and statistical inference of the flagship application, shipped as a commercial product at genomics startup biomodal.</p>
+    <p>Built the analysis, validation and statistical calling behind biomodal's flagship methylation software, taking it from prototype to a commercial product used by customers.</p>
   </a>
   <a class="card" style="--c: var(--accent-3)" href="{{ '/experience/#berkeley' | relative_url }}">
     <h3>The $70M DESI survey</h3>
-    <p>Co-led a ~10-person team; my algorithms for target selection and survey efficiency ran on every observation. I led the design of a new survey type for the five-year DESI-II program.</p>
+    <p>Co-led a 10-person team on the $70M Dark Energy Spectroscopic Instrument. My target-selection and survey-efficiency algorithms run on every observation, and I designed a new survey type now part of the five-year DESI-II program.</p>
   </a>
 </div>
 

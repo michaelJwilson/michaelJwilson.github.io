@@ -23,7 +23,7 @@ permalink: /experience/
 
 I lead development of [`cna-maste`](https://github.com/raphael-group/cna_maste), open-source software for the detection of [copy-number aberrations](https://www.genome.gov/genetics-glossary/Copy-Number-Variation-CNV) — gains and losses of DNA due to cancerous tumor growth — in high-resolution spatial transcriptomics, which maps gene expression across a slice of tissue ([10x VisiumHD](https://www.10xgenomics.com/platforms/visium/product-family), [Illumina StrataMap](https://www.illumina.com/products/by-brand/stratamap.html)).
 
-By exploiting sparsity, graph-cut optimization, JAX and a carefully chosen inductive bias, `cna-maste` improves sensitivity and recall by ~25% over existing methods, and scales inference to ~100K spatial locations in minutes — more than 20× the size of current datasets.
+By exploiting sparsity, graph-cut optimization, JAX and a carefully chosen inductive bias, `cna-maste` improves sensitivity and recall by ~25% over existing methods, and scales inference to ~100K pixels in minutes — more than 20× the size of current datasets.
 
 The method is validated on simulations and on an ovarian cancer sample, and a first-author manuscript has been submitted.
 </div>
