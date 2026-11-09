@@ -30,6 +30,9 @@ show_talks: true
 email: wilson.michael.j.22@gmail.com
 github: michaelJwilson
 linkedin: https://www.linkedin.com/in/michael-wilson-62a224b7
+# Floating contact box: LinkedIn's compose link, e.g.
+# https://www.linkedin.com/messaging/compose/?recipient=<member id>; empty opens the profile
+linkedin_message:
 
 exclude:
   - LICENSE
