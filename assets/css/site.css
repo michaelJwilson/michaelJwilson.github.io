@@ -230,6 +230,7 @@ body.inner.scene-page .backdrop { filter: brightness(.08) blur(2px); }
   text-align: justify; hyphens: auto; -webkit-hyphens: auto;
 }
 .panel .meta, .panel .buttons, .figure figcaption, .talks td { text-align: left; hyphens: manual; }
+.panel .buttons.center { text-align: center; }
 .figure figcaption { text-align: center; }
 .talks .talk-month { text-align: right; }
 @media (max-width: 700px) { .talks .talk-month { text-align: left; } }
