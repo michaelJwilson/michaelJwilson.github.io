@@ -241,15 +241,12 @@ body.inner.scene-page .backdrop { filter: brightness(.08) blur(2px); }
 
 /* Floating contact box, bottom right */
 .contact-box {
-  position: fixed; right: 20px; bottom: 20px; z-index: 50; display: flex; align-items: center; gap: 12px;
-  padding: 12px 18px 12px 14px; border-radius: 10px; color: #fff;
+  position: fixed; right: 20px; bottom: 20px; z-index: 50; display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px 10px 12px; border-radius: 10px; color: #fff;
   background: rgba(16, 20, 26, .92); border: 1px solid var(--line); border-left: 3px solid var(--accent);
   box-shadow: 0 12px 36px rgba(0, 0, 0, .5); backdrop-filter: blur(6px);
   transition: transform .2s ease, background .2s ease;
 }
 .contact-box:hover { text-decoration: none; transform: translateY(-2px); background: rgba(24, 30, 38, .96); }
-.contact-icon { width: 26px; height: 26px; flex: none; color: var(--accent); }
-.contact-text { display: flex; flex-direction: column; line-height: 1.25; }
-.contact-label { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-2); }
-.contact-action { font-size: .9rem; font-weight: 400; }
-@media (max-width: 600px) { .contact-text { display: none; } .contact-box { padding: 12px; } }
+.contact-icon { width: 22px; height: 22px; flex: none; color: #fff; }
+.contact-label { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: #fff; line-height: 1; }
