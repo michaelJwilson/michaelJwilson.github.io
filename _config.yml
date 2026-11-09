@@ -17,6 +17,9 @@ background_credit: "Background: DESI 3D map of the Universe (DESI collaboration)
 # (e.g. assets/img/profile.jpg) and point this at it.
 profile_image: /assets/img/profile.jpg
 
+# Cloudflare Web Analytics (no cookies). Leave empty to turn tracking off.
+cloudflare_analytics_token: 2effbf5a161748008c0db302d2dc672f
+
 # Show the Talks tab and page (true / false)
 show_talks: true
 
