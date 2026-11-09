@@ -1,9 +1,8 @@
 {%- comment -%}
-  Floating contact box, bottom right on every page. It opens a LinkedIn message:
-  linkedin_message in _config.yml when set (LinkedIn's compose link, which needs the
-  member id), else the profile, where "Message" starts one.
+  Floating contact box, bottom right on every page: the Gmail symbol and "Contact",
+  opening an email to site.email (_config.yml).
 {%- endcomment -%}
-<a class="contact-box" href="{{ site.linkedin_message | default: site.linkedin }}" target="_blank" rel="noopener" aria-label="Message {{ site.title }} on LinkedIn">
-  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+<a class="contact-box" href="mailto:{{ site.email }}" aria-label="Email {{ site.title }}">
+  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
   <span class="contact-label">Contact</span>
 </a>
