@@ -11,7 +11,7 @@ permalink: /portfolio/
 ## SEARCH
 <p class="meta">automation for a chaotic job market</p>
 
-The job hunt, run like a codebase. Every submitted posting is mapped by commute time and cost, then tracked through to success. Analytics reveal current demand, and the CV stays aligned under version control. Gaps close with targeted resources and a showcase project.
+The job hunt, run like a codebase. Every submitted posting is mapped by commute time and cost, then tracked through to success. Analytics reveal current demand, and the CV alignment happens under version control. Gaps close with targeted resources and a showcase project.
 </div>
 <div class="role-figure">
 <button class="video-thumb" type="button" aria-label="Play the SEARCH demo, full screen">
