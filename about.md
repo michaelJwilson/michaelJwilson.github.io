@@ -24,7 +24,3 @@ I'm a US permanent resident based in Princeton, NJ, and open to roles in NYC and
     <p>Co-led a 10-person team on the $70M Dark Energy Spectroscopic Instrument. My target-selection and survey-efficiency algorithms run on every observation, and I designed a new survey type now part of the five-year DESI-II program.</p>
   </a>
 </div>
-
-## Get in touch
-
-<p><a class="button primary" href="mailto:{{ site.email }}">Email me</a> &nbsp; <a class="button" href="{{ '/cv/' | relative_url }}">CV</a></p>
