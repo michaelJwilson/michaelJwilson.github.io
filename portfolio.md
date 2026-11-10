@@ -11,9 +11,7 @@ permalink: /portfolio/
 ## SEARCH
 <p class="meta">automation for a chaotic job market</p>
 
-A job search run as a codebase: postings are version-controlled JSON, checked against one vocabulary of skills and their aliases, and mapped with commute time and monthly cost from train timetables and fare tables.
-
-Each CV version, built from LaTeX, is scored against a posting, with a ticket that separates what the CV can restate from the skills still to acquire; gaps link to resources and a showcase project. Python, SQLite and plotly, with a single-file dashboard.
+Submitted postings mapped with commute time and cost, from trains, connections and fares; progress, until success, on a timeline of every application; the current demand across postings; version-controlled CV alignment, a CV version scored against each posting with a ticket for the changes; and the gap closed with resources and a showcase project for each missing skill.
 </div>
 <div class="role-figure">
 <button class="video-thumb" type="button" aria-label="Play the SEARCH demo, full screen">
@@ -22,7 +20,6 @@ Each CV version, built from LaTeX, is scored against a posting, with a ticket th
   </video>
   <span class="video-play" aria-hidden="true"></span>
 </button>
-<p class="video-note">46 s demo · click to play full screen</p>
 </div>
 </section>
 
