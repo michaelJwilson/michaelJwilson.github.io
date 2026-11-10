@@ -11,7 +11,7 @@ permalink: /portfolio/
 ## SEARCH
 <p class="meta">automation for a chaotic job market</p>
 
-Submitted postings mapped with commute time and cost, from trains, connections and fares; progress, until success, on a timeline of every application; the current demand across postings; version-controlled CV alignment, a CV version scored against each posting with a ticket for the changes; and the gap closed with resources and a showcase project for each missing skill.
+Every submitted posting is mapped with its commute time and cost, from trains, connections and fares. A timeline tracks progress until success, the analytics show current demand, and the CV stays aligned under version control. Gaps close with resources and a showcase project for each missing skill.
 </div>
 <div class="role-figure">
 <button class="video-thumb" type="button" aria-label="Play the SEARCH demo, full screen">
