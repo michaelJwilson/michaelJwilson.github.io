@@ -21,7 +21,7 @@ permalink: /experience/
 ## Princeton University
 <p class="meta">Associate Research Scholar · 2024 – present</p>
 
-I lead development of [`cna-maste`](https://github.com/raphael-group/cna_maste), open-source software for the detection of [copy-number aberrations](https://www.genome.gov/genetics-glossary/Copy-Number-Variation-CNV) — gains and losses of DNA due to cancerous tumor growth — in high-resolution spatial transcriptomics. [VisiumHD](https://www.10xgenomics.com/platforms/visium/product-family) by 10x Genomics and [StrataMap](https://www.illumina.com/products/by-brand/stratamap.html) by Illumina are leading protocols that map gene expression across a tissue slice.
+I lead development of [`cna-maste`](https://github.com/raphael-group/cna_maste), open-source software for the detection of [copy-number aberrations](https://www.genome.gov/genetics-glossary/Copy-Number-Variation-CNV) — gains and losses of DNA due to cancerous tumor growth — in high-resolution spatial transcriptomics. [Visium HD](https://www.10xgenomics.com/platforms/visium/product-family) by 10x Genomics and [StrataMap](https://www.illumina.com/products/by-brand/stratamap.html) by Illumina are leading protocols that map gene expression across a tissue slice.
 
 By exploiting sparsity, graph-cut optimization, JAX and a carefully chosen inductive bias, `cna-maste` improves sensitivity and recall by ~25% over existing methods, and scales inference to ~100K pixels in minutes — more than 20× the size of current datasets.
 

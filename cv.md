@@ -10,11 +10,11 @@ permalink: /cv/
 
 ## Technical skills
 
-- **Languages & libraries:** Python (pandas, polars, NumPy, SciPy, Dask), Rust, C, PyTorch, JAX
-- **Data engineering:** data cleaning, ETL, Nextflow, Docker, GCP, HPC (SLURM)
 - **Tools:** Linux, Git, AI-assisted development (Claude Code)
-- **Statistics & ML/AI:** Bayesian inference, graphical models, optimization, deep learning
-- **Communication:** data visualization, technical writing, talks, mentoring, cross-functional teams
+- **Data engineering:** ETL, data cleaning & analysis, Nextflow, Docker, GCP, HPC (SLURM)
+- **Languages & libraries:** Python (NumPy, SciPy, pandas, polars, Dask, scikit-learn), PyTorch, JAX, Rust, C
+- **Statistics & ML/AI:** probabilistic modeling, inference & optimization, deep learning, model validation
+- **Communication:** literature review, technical writing and visualization, talks, supervision and mentoring
 
 ## Education
 
