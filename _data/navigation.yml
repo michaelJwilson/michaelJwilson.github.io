@@ -1,5 +1,6 @@
 # Tabs, in order. "Home" shows in the top bar on inner pages;
-# the landing page shows the rest as buttons.
+# the landing page shows the rest as buttons. An external tab opens its
+# site in a new browser tab, marked with an arrow.
 - title: Home
   url: /
 - title: About
@@ -15,3 +16,6 @@
 - title: Talks
   url: /talks/
   flag: show_talks   # only shown when show_talks: true in _config.yml
+- title: GitHub
+  url: https://github.com/michaelJwilson
+  external: true

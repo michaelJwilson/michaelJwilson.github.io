@@ -15,7 +15,7 @@
     </div>
     <nav class="button-row" aria-label="Main">
       {% for item in site.data.navigation %}{% if item.flag and site[item.flag] != true %}{% continue %}{% endif %}{% unless item.url == "/" %}
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% if item.external %}<a class="external" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}
       {% endunless %}{% endfor %}
     </nav>
     {{ content }}

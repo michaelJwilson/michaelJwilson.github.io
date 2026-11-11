@@ -13,6 +13,7 @@
       </a>
       <nav class="button-row small" aria-label="Main">
         {% for item in site.data.navigation %}{% if item.flag and site[item.flag] != true %}{% continue %}{% endif %}
+          {% if item.external %}<a class="external" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% continue %}{% endif %}
           {% assign active = false %}
           {% if item.url == "/" %}{% if page.url == "/" %}{% assign active = true %}{% endif %}
           {% elsif page.url contains item.url %}{% assign active = true %}{% endif %}
