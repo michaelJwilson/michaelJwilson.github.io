@@ -46,16 +46,18 @@ body.home .backdrop::after {
 }
 .button-row a:first-child { border-left: 0; }
 .button-row a:hover { background: rgba(255, 255, 255, .08); text-decoration: none; color: #fff; }
+/* NB an external tab opens another site in a new browser tab */
+.button-row a.external::after { content: " \2197"; letter-spacing: 0; }
 .button-row a.active { background: rgba(95, 179, 230, .18); color: #fff; box-shadow: inset 0 -2px 0 var(--accent); }
 .button-row.small a { padding: .55em 1.1em; font-size: .72rem; letter-spacing: .18em; }
 /* NB phone tabs: two rows on a grid, a line between them; Publications spans Home and About,
-   so its divider lines up with About's, and Talks fills the rest of the row */
+   Talks sits under Experience and GitHub spans Portfolio and CV, so the dividers line up */
 @media (max-width: 700px) {
   .button-row.small { display: inline-grid; grid-template-columns: repeat(5, auto); justify-content: stretch; }
   .button-row.small a { text-align: center; }
   .button-row.small a:nth-child(n+6) { border-top: 1px solid var(--line); }
   .button-row.small a:nth-child(6) { grid-column: span 2; border-left: 0; }
-  .button-row.small a:nth-child(7) { grid-column: span 3; text-align: left; }
+  .button-row.small a.external { grid-column: span 2; }
 }
 
 /* Landing page */
