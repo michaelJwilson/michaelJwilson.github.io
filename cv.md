@@ -10,11 +10,10 @@ permalink: /cv/
 
 ## Technical skills
 
-- **Tools:** Linux, Git, AI-assisted development (Claude Code)
-- **Data engineering:** ETL, data cleaning & analysis, Nextflow, Docker, GCP, HPC (SLURM)
-- **Languages & libraries:** Python (NumPy, SciPy, pandas, polars, Dask, scikit-learn, pytest, uv), PyTorch, JAX, Rust, C
-- **Statistics & ML/AI:** probabilistic modeling, inference & optimization, deep learning, model validation
-- **Communication:** literature review, technical writing and visualization, talks, supervision and mentoring
+- **Engineering:** data analysis & curation, workflows (Nextflow), Docker, cloud computing (GCP), scientific computing (SLURM), Linux, Git, AI coding (Claude)
+- **Frameworks:** Python (NumPy, SciPy, pandas, polars, Dask, scikit-learn), automated testing (pytest), documentation, Python packaging (uv), PyTorch, JAX, Rust, C
+- **Statistics/ML/AI:** probabilistic modeling & Bayesian inference, optimization, simulation, signal processing (FFT), machine learning, model validation
+- **Communication:** technical writing, visualization, literature review, presentation, mentoring
 
 ## Education
 
