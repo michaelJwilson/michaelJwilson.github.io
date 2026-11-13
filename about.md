@@ -13,7 +13,7 @@ I'm a US permanent resident based in Princeton, NJ, and open to roles in NYC and
 <div class="cards">
   <a class="card" style="--c: var(--accent)" href="{{ '/experience/#princeton' | relative_url }}">
     <h3>Cancer genomics at scale</h3>
-    <p>Lead developer of <code>cna-maste</code>, open-source software that finds cancer-driven DNA gains and losses in spatial maps of gene expression, analyzing 100K-pixel tissue slices in minutes with ~25% better accuracy than existing tools.</p>
+    <p>Lead developer of <code>cna-maste</code>, open-source software that finds cancer-driven DNA gains and losses in spatial maps of gene expression, analyzing 100K-pixel tissue slices in minutes with ~20% better accuracy than existing tools.</p>
   </a>
   <a class="card" style="--c: var(--accent-2)" href="{{ '/experience/#biomodal' | relative_url }}">
     <h3>From prototype to product</h3>
